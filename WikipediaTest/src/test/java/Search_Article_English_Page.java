@@ -5,16 +5,16 @@ import org.testng.annotations.Test;
 public class Search_Article_English_Page extends TestBase {
 
     @Test
-    public void searchArticleEnPage(){
+    public void searchArticleEnPage() {
 
         clickOnEnLink();
-        type("Marie Curie",By.name("search"));
+        type("Marie Curie", By.name("search"));
         click(By.cssSelector("input#searchButton"));
 
         String actualURL = driver.getCurrentUrl();
-        String expectedURL =  "https://en.wikipedia.org/wiki/Marie_Curie";
+        String expectedURL = "https://en.wikipedia.org/wiki/Marie_Curie";
 
-        Assert.assertEquals(actualURL,expectedURL);
+        Assert.assertEquals(actualURL, expectedURL);
 
         returnToPreviousPage();
     }
